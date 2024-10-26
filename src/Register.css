@@ -1,0 +1,223 @@
+/* Basic page styling */
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #cfd9df 0%, #e2ebf0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Container for the registration form */
+.registration-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #fff, #f7f9fc);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Form headings */
+.registration-container h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Form inputs */
+.registration-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+/* Form inputs hover and focus */
+.registration-container input:hover,
+.registration-container input:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+/* Form submit button */
+.registration-container button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.registration-container button:hover {
+  background: linear-gradient(135deg, #0062cc, #004b9a);
+}
+
+/* Notification styling */
+.notification {
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  animation: fadeInSlideUp 0.5s ease-in-out;
+  margin-top: 20px;
+}
+
+.notification.success {
+  background-color: #d4edda;
+  color: #0a6b20;
+}
+
+.notification.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+@keyframes fadeInSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Floating label container styling */
+.floating-label {
+  position: relative;
+  margin-bottom: 20px;
+  width: 100%;
+  left: -24px;
+}
+
+.floating-label input {
+  width: 110%;
+  padding: 12px 10px 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+.floating-label input:focus {
+  border-color: #007bff;
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.3);
+}
+
+.floating-label label {
+  position: absolute;
+  left: 12px;
+  top: 40%;
+  transform: translateY(-50%);
+  color: #aaa;
+  transition: 0.2s;
+  font-size: 16px;
+  pointer-events: none;
+}
+
+/* Move the label on input focus */
+.floating-label input:focus + label,
+.floating-label input:not(:placeholder-shown) + label {
+  top: -3px;
+  font-size: 12px;
+  color: #007bff;
+  background-color: white;
+  padding: 0 5px;
+}
+
+.show-password-container {
+  display: flex;
+  align-items: center;
+  margin-top: -28px;
+  margin-bottom: -5px;
+  margin-left: 82 px; /* Increase this to move it even more to the right */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.show-password-text {
+  font-size: 14px;
+  margin-left: -14px;
+}
+
+input[type="checkbox"] {
+  margin-right: 200px;
+}
+
+.password-field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.eye-icon {
+  position: absolute;
+  right: -30px; /* Adjust as necessary */
+  top: 41%;
+  transform: translateY(-50%);
+  font-size: 1.2em;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.eye-icon:hover {
+  color: #007bff;
+}
+
+/* Toggle link styling */
+.toggle-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 15px;
+  color: #333;
+}
+
+.toggle-link {
+  color: #007bff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-link:hover {
+  text-decoration: underline;
+}
+ 
